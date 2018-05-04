@@ -1,0 +1,25 @@
+<UI version="4.0" >
+ <class>QBX_TestClass</class>
+ <widget class="QWidget" name="QBX_TestClass" >
+  <property name="objectName" >
+   <string notr="true">QBX_TestClass</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+	<x>0</x>
+	<y>0</y>
+	<width>600</width>
+	<height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>QBX_Test</string>
+  </property>
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
+ <resources>
+   <include location="qbx_test.qrc"/>
+ </resources>
+ <connections/>
+</UI>
