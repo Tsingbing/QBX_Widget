@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/MUI">
+        <file>Resources/images/MUI/mui.svg</file>
+        <file>Resources/images/MUI/mui_face.svg</file>
+        <file>Resources/images/MUI/mui_ring.svg</file>
+        <file>Resources/images/MUI/mui_ring2.svg</file>
+    </qresource>
+</RCC>

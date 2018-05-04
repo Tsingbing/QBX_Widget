@@ -1,25 +1,40 @@
-<UI version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>QBX_TestClass</class>
- <widget class="QWidget" name="QBX_TestClass" >
-  <property name="objectName" >
-   <string notr="true">QBX_TestClass</string>
-  </property>
-  <property name="geometry" >
+ <widget class="QWidget" name="QBX_TestClass">
+  <property name="geometry">
    <rect>
-	<x>0</x>
-	<y>0</y>
-	<width>600</width>
-	<height>400</height>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>QBX_Test</string>
   </property>
+  <widget class="qbx_Video" name="widgetVideo" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>601</width>
+     <height>401</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>qbx_Video</class>
+   <extends>QWidget</extends>
+   <header location="global">qbx_Video.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
-   <include location="qbx_test.qrc"/>
+  <include location="qbx_test.qrc"/>
  </resources>
  <connections/>
-</UI>
+</ui>

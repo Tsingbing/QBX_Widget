@@ -50,6 +50,18 @@
     <ClCompile Include="GeneratedFiles\qrc_qbx_test.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
+    <ClCompile Include="demo_detect_track.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qbx_Video.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qbx_Video.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qbx_Video.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="qbx_test.h">
@@ -61,10 +73,16 @@
     <CustomBuild Include="qbx_test.qrc">
       <Filter>Resource Files</Filter>
     </CustomBuild>
+    <CustomBuild Include="qbx_Video.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_qbx_test.h">
       <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="demo_detect_track.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
