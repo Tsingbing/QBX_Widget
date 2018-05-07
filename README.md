@@ -20,4 +20,4 @@
 
 ##### 测试主页面
 
-![image](E:/01_RobotSea/01_Pro/QBX/Resource/mainpage.jpg)
+![image](https://github.com/qbingx/QBX_Widget/blob/2018.5.4/Resource/mainpage.jpg)
