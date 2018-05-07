@@ -38,8 +38,8 @@ void MUI::timerEvent(QTimerEvent * event)
 	ui.graphicsMUI->update();
 }
 
-void MUI::update()
-{
-	ui.graphicsMUI->update();
-}
+//void MUI::update()
+//{
+	//ui.graphicsMUI->update();
+//}
 

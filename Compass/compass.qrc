@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/Compass">
+        <file>Resources/images/Compass/compass_case.svg</file>
+        <file>Resources/images/Compass/compass_hand.svg</file>
+        <file>Resources/images/Compass/compass_ring.svg</file>
+    </qresource>
+</RCC>

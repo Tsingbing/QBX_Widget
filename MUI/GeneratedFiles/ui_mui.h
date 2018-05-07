@@ -32,6 +32,8 @@ public:
         graphicsMUI = new qbx_MUI(MUIClass);
         graphicsMUI->setObjectName(QStringLiteral("graphicsMUI"));
         graphicsMUI->setGeometry(QRect(50, 10, 1000, 1000));
+        graphicsMUI->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        graphicsMUI->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
         retranslateUi(MUIClass);
 
