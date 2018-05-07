@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/Depth">
+        <file>Resources/images/Depth/Depth.svg</file>
+    </qresource>
+</RCC>

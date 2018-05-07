@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VoyageClass</class>
+ <widget class="QWidget" name="VoyageClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>949</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Voyage</string>
+  </property>
+  <widget class="qbx_Voyage" name="graphicsVoyage">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>290</y>
+     <width>821</width>
+     <height>101</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>qbx_Voyage</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">qbx_Voyage.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="voyage.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DepthClass</class>
+ <widget class="QWidget" name="DepthClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Depth</string>
+  </property>
+  <widget class="qbx_Depth" name="graphicsDepth">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>90</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>qbx_Depth</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">qbx_Depth.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="depth.qrc"/>
+ </resources>
+ <connections/>
+</ui>

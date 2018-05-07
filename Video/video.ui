@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VideoClass</class>
+ <widget class="QWidget" name="VideoClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>974</width>
+    <height>653</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Video</string>
+  </property>
+  <widget class="qbx_Video" name="widgetVideo" native="true">
+   <property name="geometry">
+    <rect>
+     <x>79</x>
+     <y>39</y>
+     <width>721</width>
+     <height>541</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>qbx_Video</class>
+   <extends>QWidget</extends>
+   <header location="global">qbx_Video.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="video.qrc"/>
+ </resources>
+ <connections/>
+</ui>

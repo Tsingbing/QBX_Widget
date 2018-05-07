@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/Voyage">
+        <file>Resources/Voyage/Voyage.svg</file>
+    </qresource>
+</RCC>

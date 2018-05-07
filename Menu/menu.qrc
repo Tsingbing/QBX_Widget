@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/Menu">
+        <file>Resources/images/Menu/menu_face.svg</file>
+        <file>Resources/images/Menu/menu_logo - 副本.svg</file>
+        <file>Resources/images/Menu/menu_logo.svg</file>
+        <file>Resources/images/Menu/menu_logo1 - 副本.svg</file>
+        <file>Resources/images/Menu/menu_logo1.svg</file>
+        <file>Resources/images/Menu/menu_sub.svg</file>
+    </qresource>
+</RCC>

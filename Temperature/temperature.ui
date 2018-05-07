@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TemperatureClass</class>
+ <widget class="QWidget" name="TemperatureClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>579</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Temperature</string>
+  </property>
+  <widget class="qbx_Temperature" name="graphicsTemperature">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>50</y>
+     <width>111</width>
+     <height>401</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>qbx_Temperature</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">qbx_temperature.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="temperature.qrc"/>
+ </resources>
+ <connections/>
+</ui>
