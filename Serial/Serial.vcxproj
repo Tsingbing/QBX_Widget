@@ -236,6 +236,9 @@
   <ItemGroup>
     <Text Include="readme.md" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="shark协议表.xlsx" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

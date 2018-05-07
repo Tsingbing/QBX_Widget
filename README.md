@@ -17,3 +17,7 @@
 * 整个工程项目也会github代码保存，是公开的。
 	
 * 如果有可能的话，需要建立私有的代码管理体系，如gitlab等代码管理。
+
+##### 测试主页面
+
+![image](E:/01_RobotSea/01_Pro/QBX/Resource/mainpage.jpg)
