@@ -81,7 +81,7 @@ void qbx_Menu::init()
 	m_scene->addItem(m_itemBack);
 
 	//无法调用logo.svg
-	m_itemLogo = new QGraphicsSvgItem(":/Menu/Resources/images/Menu/menu_sub.svg");
+	m_itemLogo = new QGraphicsSvgItem(":/Menu/Resources/images/Menu/menu_logo1.svg");
 	m_itemLogo->setCacheMode(QGraphicsItem::NoCache);
 	m_itemLogo->setTransform(QTransform::fromScale(m_scaleX, m_scaleY), true);
 	m_itemLogo->moveBy(m_scaleX * (m_originalLogoX - m_itemLogo->boundingRect().width() / 2.0f),

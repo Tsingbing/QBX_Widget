@@ -68,4 +68,7 @@
       <Filter>Other Files</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.md" />
+  </ItemGroup>
 </Project>
