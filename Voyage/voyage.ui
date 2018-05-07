@@ -29,7 +29,7 @@
   <customwidget>
    <class>qbx_Voyage</class>
    <extends>QGraphicsView</extends>
-   <header location="global">qbx_Voyage.h</header>
+   <header location="global">qbx_voyage.h</header>
   </customwidget>
  </customwidgets>
  <resources>
