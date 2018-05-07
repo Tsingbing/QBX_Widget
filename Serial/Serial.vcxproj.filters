@@ -24,12 +24,12 @@
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Debug">
-      <UniqueIdentifier>{06ed0e50-ecf1-4365-a8a7-9d4aba00dae4}</UniqueIdentifier>
+      <UniqueIdentifier>{b5b461ea-2109-47e5-a15d-09fe0542f8b1}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Release">
-      <UniqueIdentifier>{1ec22fce-0fd4-4875-83f0-bf2564cf2ca0}</UniqueIdentifier>
+      <UniqueIdentifier>{57f69f2e-d4a3-42ed-a085-88c15425cceb}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
@@ -38,44 +38,32 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="temperature.cpp">
+    <ClCompile Include="serial.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_temperature.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_serial.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_temperature.cpp">
+    <ClCompile Include="GeneratedFiles\Release\moc_serial.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_temperature.cpp">
+    <ClCompile Include="GeneratedFiles\qrc_serial.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="qbx_Temperature.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_qbx_Temperature.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_qbx_Temperature.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="temperature.h">
+    <CustomBuild Include="serial.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="temperature.ui">
+    <CustomBuild Include="serial.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="temperature.qrc">
+    <CustomBuild Include="serial.qrc">
       <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="qbx_Temperature.h">
-      <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GeneratedFiles\ui_temperature.h">
+    <ClInclude Include="GeneratedFiles\ui_serial.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>

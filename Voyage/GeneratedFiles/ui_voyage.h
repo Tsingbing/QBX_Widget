@@ -15,7 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QWidget>
-#include <qbx_Voyage.h>
+#include <qbx_voyage.h>
 
 QT_BEGIN_NAMESPACE
 

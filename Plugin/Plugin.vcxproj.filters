@@ -9,77 +9,63 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h</Extensions>
     </Filter>
-    <Filter Include="Form Files">
-      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
-      <Extensions>ui</Extensions>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
       <Extensions>qrc;*</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
-    <Filter Include="Generated Files">
-      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
-      <Extensions>moc;h;cpp</Extensions>
-      <SourceControlFiles>False</SourceControlFiles>
-    </Filter>
     <Filter Include="Generated Files\Debug">
-      <UniqueIdentifier>{06ed0e50-ecf1-4365-a8a7-9d4aba00dae4}</UniqueIdentifier>
+      <UniqueIdentifier>{37220c0a-4f92-4817-93dd-c816778e3379}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Release">
-      <UniqueIdentifier>{1ec22fce-0fd4-4875-83f0-bf2564cf2ca0}</UniqueIdentifier>
+      <UniqueIdentifier>{b555370e-d286-42a4-8711-3efb8cbd1901}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
+    <Filter Include="Other Files">
+      <UniqueIdentifier>{B67473BF-9FA1-4674-831E-CB28F72D4791}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="myclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="temperature.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_temperature.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_myclass.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_temperature.cpp">
+    <ClCompile Include="GeneratedFiles\Release\moc_myclass.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_temperature.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="qbx_Temperature.cpp">
+    <ClCompile Include="myclassplugin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_qbx_Temperature.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_myclassplugin.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_qbx_Temperature.cpp">
+    <ClCompile Include="GeneratedFiles\Release\moc_myclassplugin.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="temperature.h">
+    <CustomBuild Include="myclass.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="temperature.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="temperature.qrc">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="qbx_Temperature.h">
+    <CustomBuild Include="myclassplugin.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GeneratedFiles\ui_temperature.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="readme.md" />
+    <None Include="myclassplugin.json">
+      <Filter>Other Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
