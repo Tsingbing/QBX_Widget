@@ -19,7 +19,10 @@
 |Voyage      | 航程总路程
 |Serial      | 串口通信
 |Power       | 电量显示
+|OSG3D       | 3D仿真姿态显示
+|Map         | 地图
 |Plugin      | 插件系统
+|Welcome     | 启动界面
 
 * 每个文件夹内都readme.txt,记录代码更新状态、版本信息和bug信息。
 

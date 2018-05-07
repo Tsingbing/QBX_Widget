@@ -34,8 +34,8 @@ private:
 	QPixmap backGround;
 	int userdVaule;
 	int currentValue;
-	QLabel *startValueLabel;
-	QLabel *endValueLabel;
+	//QLabel *startValueLabel;
+	//QLabel *endValueLabel;
 	QLabel *dispayValueLabel;
 
 	QTimer *updateTimer;

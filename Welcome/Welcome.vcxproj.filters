@@ -24,12 +24,12 @@
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Debug">
-      <UniqueIdentifier>{b5b461ea-2109-47e5-a15d-09fe0542f8b1}</UniqueIdentifier>
+      <UniqueIdentifier>{ee4e9cbc-da4c-4e7a-9fba-95a56e95a525}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Release">
-      <UniqueIdentifier>{57f69f2e-d4a3-42ed-a085-88c15425cceb}</UniqueIdentifier>
+      <UniqueIdentifier>{9ecd8b62-760c-4248-91b6-d820fdc90184}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
@@ -38,51 +38,36 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="serial.cpp">
+    <ClCompile Include="welcome.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_serial.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_welcome.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_serial.cpp">
+    <ClCompile Include="GeneratedFiles\Release\moc_welcome.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_serial.cpp">
+    <ClCompile Include="GeneratedFiles\qrc_welcome.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="qbx_serial.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_qbx_serial.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_qbx_serial.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="serial.h">
+    <CustomBuild Include="welcome.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="serial.ui">
+    <CustomBuild Include="welcome.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="serial.qrc">
+    <CustomBuild Include="welcome.qrc">
       <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="qbx_serial.h">
-      <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GeneratedFiles\ui_serial.h">
+    <ClInclude Include="GeneratedFiles\ui_welcome.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="readme.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="shark协议表.xlsx" />
+    <None Include="readme.md" />
   </ItemGroup>
 </Project>

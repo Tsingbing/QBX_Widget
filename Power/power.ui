@@ -1,25 +1,40 @@
-<UI version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>PowerClass</class>
- <widget class="QWidget" name="PowerClass" >
-  <property name="objectName" >
-   <string notr="true">PowerClass</string>
-  </property>
-  <property name="geometry" >
+ <widget class="QWidget" name="PowerClass">
+  <property name="geometry">
    <rect>
-	<x>0</x>
-	<y>0</y>
-	<width>600</width>
-	<height>400</height>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Power</string>
   </property>
+  <widget class="qbx_Power" name="widgetPower" native="true">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>60</y>
+     <width>251</width>
+     <height>231</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>qbx_Power</class>
+   <extends>QWidget</extends>
+   <header location="global">qbx_Power.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
-   <include location="power.qrc"/>
+  <include location="power.qrc"/>
  </resources>
  <connections/>
-</UI>
+</ui>

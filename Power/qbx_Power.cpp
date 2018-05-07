@@ -15,13 +15,13 @@ qbx_Power::qbx_Power(QWidget *parent)
 	pal.setColor(QPalette::Background, QColor(0xFF, 0xFF, 0xFF, 0xFF));
 	setPalette(pal);
 
-	startValueLabel = new QLabel(tr("0%"), this);
+	/*startValueLabel = new QLabel(tr("0%"), this);
 	startValueLabel->setFont(QFont("Arial", 11, QFont::Normal));
 	startValueLabel->setStyleSheet("color:#898989");
 
 	endValueLabel = new QLabel(tr("100%"), this);
 	endValueLabel->setFont(QFont("Arial", 11, QFont::Normal));
-	endValueLabel->setStyleSheet("color:#898989");
+	endValueLabel->setStyleSheet("color:#898989");*/
 
 	dispayValueLabel = new QLabel(this);
 	dispayValueLabel->setStyleSheet("color:#349BDA");
@@ -124,8 +124,8 @@ void qbx_Power::paintEvent(QPaintEvent *event)
 void qbx_Power::resizeEvent(QResizeEvent *event)
 {
 	//move((QApplication::desktop()->width() - width()) / 2, (QApplication::desktop()->height() - height()) / 2);
-	startValueLabel->setGeometry(35, 140, 25, 20);
-	endValueLabel->setGeometry(97, 140, 50, 20);
+	//startValueLabel->setGeometry(35, 140, 25, 20);
+	//endValueLabel->setGeometry(97, 140, 50, 20);
 }
 
 /****************move everywhere*******************/
