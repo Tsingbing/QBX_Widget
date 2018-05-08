@@ -59,6 +59,15 @@
     <ClCompile Include="GeneratedFiles\Release\moc_qbx_serial.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="masterthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_masterthread.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_masterthread.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="serial.h">
@@ -71,6 +80,9 @@
       <Filter>Resource Files</Filter>
     </CustomBuild>
     <CustomBuild Include="qbx_serial.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="masterthread.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
