@@ -265,6 +265,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="shark协议表.xlsx" />
+    <None Include="演示项目协议.doc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

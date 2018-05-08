@@ -1,9 +1,9 @@
-﻿##### 开发环境
+﻿#### 开发环境
 * Qt5.9.1 + msvc2015 + 64bit
 * opencv3.2 + msvc2015 + 64bit
 * 编译器 msvc2015 + 64bits
 
-##### 文件说明
+#### 文件说明
 			 
 | 文件夹名称 | 说明 |
 | ---------- | :----: |
@@ -27,6 +27,13 @@
 
 * 每个文件夹内都readme.md,记录代码更新状态、版本信息和bug信息。
 * 每个文件夹都是可执行的项目，都有测试代码。
-##### 测试主页面
+
+#### API 设计规范
+>参考 [Qt API设计原则](http://wiki.qt.io/API_Design_Principles)
+
+>参考《C++ API设计规范》
+
+>bug编号 qb-01
+#### 测试主页面
 
 ![image](https://github.com/qbingx/QBX_Widget/blob/2018.5.4/Resource/mainpage.jpg)
