@@ -25,3 +25,17 @@
 - qb_02 结构体对齐导致数据不准。
   - 添加 #pragma pack(4) ... pragma pack()
 
+
+
+#### 主要代码
+```
+QByteArray requestData;
+//requestData.resize(sizeof(sData));
+requestData[0] = 0xAA;
+requestData[1] = sizeof(DataMove) + 6;
+requestData[2] = 0xFE;
+requestData[3] = 0x01;
+requestData[4] = 0x00;
+requestData += Code;
+requestData += 0xBB;
+```
