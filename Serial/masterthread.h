@@ -5,6 +5,7 @@
 #include <QThread>
 #include <QMutex>
 #include <QWaitCondition>
+#include "data_struct.h"
 
 //! [0]
 class MasterThread : public QThread
@@ -19,7 +20,7 @@ public:
     void run() Q_DECL_OVERRIDE;
 
 signals:
-    void response(const QString &s);
+    void response(const QByteArray &s);
     void error(const QString &s);
     void timeout(const QString &s);
 
@@ -30,6 +31,9 @@ private:
     QMutex mutex;
     QWaitCondition cond;
     bool quit;
+
+	Data_MOVE_TypeDef DataMove;
+	DataPackage_TypeDef sData;
 };
 //! [0]
 

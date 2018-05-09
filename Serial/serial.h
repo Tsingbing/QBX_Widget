@@ -18,7 +18,7 @@ private:
 
 private slots:
 	void transaction();
-	void showResponse(const QString &s);
+	void showResponse(const QByteArray &s);
 	void processError(const QString &s);
 	void processTimeout(const QString &s);
 

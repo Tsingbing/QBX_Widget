@@ -1,6 +1,6 @@
 ﻿
 #include "masterthread.h"
-#include "data_struct.h"
+
 #include <QtSerialPort/QSerialPort>
 
 #include <QTime>
@@ -73,32 +73,29 @@ void MasterThread::run()
         //! [7] //! [8]
         // write request
         //QByteArray requestData = currentRequest.toLocal8Bit();
-		//QByteArray requestData;
-		//requestData.resize(50);
-		//requestData[0] = 0x01 ;
-		//requestData[9] = 0x09 ;
-		//requestData = QByteArray::fromHex("000c0dfffe");
-		sDataFreeMove.Mode = 0;
-		sDataFreeMove.PID_Heading_ENorDIS = 1;
-		sDataFreeMove.PID_Deep_ENorDIS = 2;
-		sDataFreeMove.PID_Roll_ENorDIS = 3;
-		sDataFreeMove.Speed = 4;
-		sDataFreeMove.heading = 5;
-		sDataFreeMove.pitch = 6;
-		sDataFreeMove.roll = 7;
+
+		////////////////////////////////////////////////////////////////////////////////
+
+		DataMove.Speed = 1;
+		DataMove.Direction = 2;
+		DataMove.lightpower = 3;
+		DataMove.Deepset = 4;
+		DataMove.Roll = 5;
+		DataMove.Yaw = 6;
 
 		sData.Head = 0xAA;
-		sData.PackageLength = sizeof(sDataFreeMove) + 6;
+		sData.PackageLength = sizeof(DataMove) + 12 - 1; //结构体字节补齐
+		//sData.PackageLength = sizeof(sData);
 		sData.SendID = 0xFE;
 		sData.ReceivedID = 0x01;
-		sData.Cmd = 0x00;
-		memcpy(&sData.Cmd, (char*)&sDataFreeMove, sizeof(sDataFreeMove));
+		sData.Cmd = 0x01;
+		memcpy(&(sData.Code), &DataMove, sizeof(DataMove));
+
 		sData.Tail = 0xBB;
 
 		QByteArray requestData = QByteArray::fromRawData((char*)&sData, sData.PackageLength);
-		//去除QByteArray末尾结尾0x00;
-		requestData.remove(sData.PackageLength-1, 1);
 		//////////////////////////////////////////////////////////////////////////////////
+
         serial.write(requestData);
         if (serial.waitForBytesWritten(waitTimeout)) {
             //! [8] //! [10]
@@ -108,9 +105,9 @@ void MasterThread::run()
                 while (serial.waitForReadyRead(10))
                     responseData += serial.readAll();
 
-                QString response(responseData);
+                //QString response(responseData);
                 //! [12]
-                emit this->response(response);
+                emit this->response(responseData);
                 //! [10] //! [11] //! [12]
             } else {
                 emit timeout(tr("Wait read response timeout %1")

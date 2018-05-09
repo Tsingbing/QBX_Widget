@@ -22,6 +22,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -40,6 +41,7 @@ public:
     QLineEdit *requestLineEdit;
     QLabel *trafficLabel;
     QLabel *statusLabel;
+    QTextEdit *showDate;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -48,7 +50,7 @@ public:
     {
         if (SerialClass->objectName().isEmpty())
             SerialClass->setObjectName(QStringLiteral("SerialClass"));
-        SerialClass->resize(525, 400);
+        SerialClass->resize(800, 400);
         centralWidget = new QWidget(SerialClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         runButton = new QPushButton(centralWidget);
@@ -80,10 +82,13 @@ public:
         statusLabel = new QLabel(centralWidget);
         statusLabel->setObjectName(QStringLiteral("statusLabel"));
         statusLabel->setGeometry(QRect(40, 310, 381, 16));
+        showDate = new QTextEdit(centralWidget);
+        showDate->setObjectName(QStringLiteral("showDate"));
+        showDate->setGeometry(QRect(570, 30, 131, 271));
         SerialClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(SerialClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 525, 23));
+        menuBar->setGeometry(QRect(0, 0, 800, 23));
         SerialClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(SerialClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));

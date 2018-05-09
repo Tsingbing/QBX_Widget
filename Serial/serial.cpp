@@ -31,13 +31,20 @@ void Serial::transaction()
 		ui.requestLineEdit->text());
 }
 
-void Serial::showResponse(const QString & s)
+void Serial::showResponse(const QByteArray & s)
 {
 	setControlsEnabled(true);
+	
+	//添加解析函数，将QByteArray反序列化。
+	const DataPackage_TypeDef* pData = (DataPackage_TypeDef*)(s.data());
+	Data_MOVE_TypeDef DataMove;//
+	memcpy(&DataMove, &(pData->Code), pData->PackageLength - 11);  //数字11 = 12 - 1字节对齐
+    //memcpy(&DataMove, (char*)(pData)+4, pData->PackageLength - 6);//截取字节段copy到结构体。
+
 	ui.trafficLabel->setText(tr("Traffic, transaction #%1:"
 		"\n\r-request: %2"
 		"\n\r-response: %3")
-		.arg(++transactionCount).arg(ui.requestLineEdit->text()).arg(s));
+		.arg(QString::number(DataMove.Yaw)).arg(ui.requestLineEdit->text()).arg(QString(s.data())));
 
 }
 

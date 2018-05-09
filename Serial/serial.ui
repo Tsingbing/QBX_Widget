@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>525</width>
+    <width>800</width>
     <height>400</height>
    </rect>
   </property>
@@ -131,13 +131,23 @@
      <string>Status: Not running.</string>
     </property>
    </widget>
+   <widget class="QTextEdit" name="showDate">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>30</y>
+      <width>131</width>
+      <height>271</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>525</width>
+     <width>800</width>
      <height>23</height>
     </rect>
    </property>
