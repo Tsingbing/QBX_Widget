@@ -6,14 +6,15 @@
 #### 设计
 * 使用线程来编写
 * 参考Qt示例
-* QByteArray储存二进制数据(包括结构体,自定义QT对象)序列化
-
+* [序列化和反序列化](https://blog.csdn.net/yj540993866/article/details/48367139)
+* [QByteArray](http://doc.qt.io/qt-5.9/qbytearray.html)::fromHex("000c0dfffe")
+* QByteArray::fromRawData((char*)&sData, sData.PackageLength)
 #### 建立接口
 * 发送消息
 * 接收消息
 * 处理消息 
 
-#### 附件协议
+#### 附件协
 * shark协议表.xlsx
 
 #### 文件说明

@@ -1,6 +1,6 @@
 
 #include "masterthread.h"
-
+#include "data_struct.h"
 #include <QtSerialPort/QSerialPort>
 
 #include <QTime>
@@ -72,7 +72,33 @@ void MasterThread::run()
         }
         //! [7] //! [8]
         // write request
-        QByteArray requestData = currentRequest.toLocal8Bit();
+        //QByteArray requestData = currentRequest.toLocal8Bit();
+		//QByteArray requestData;
+		//requestData.resize(50);
+		//requestData[0] = 0x01 ;
+		//requestData[9] = 0x09 ;
+		//requestData = QByteArray::fromHex("000c0dfffe");
+		sDataFreeMove.Mode = 0;
+		sDataFreeMove.PID_Heading_ENorDIS = 1;
+		sDataFreeMove.PID_Deep_ENorDIS = 2;
+		sDataFreeMove.PID_Roll_ENorDIS = 3;
+		sDataFreeMove.Speed = 4;
+		sDataFreeMove.heading = 5;
+		sDataFreeMove.pitch = 6;
+		sDataFreeMove.roll = 7;
+
+		sData.Head = 0xAA;
+		sData.PackageLength = sizeof(sDataFreeMove) + 6;
+		sData.SendID = 0xFE;
+		sData.ReceivedID = 0x01;
+		sData.Cmd = 0x00;
+		memcpy(&sData.Cmd, (char*)&sDataFreeMove, sizeof(sDataFreeMove));
+		sData.Tail = 0xBB;
+
+		QByteArray requestData = QByteArray::fromRawData((char*)&sData, sData.PackageLength);
+		//È¥³ýQByteArrayÄ©Î²½áÎ²0x00;
+		requestData.remove(sData.PackageLength-1, 1);
+		//////////////////////////////////////////////////////////////////////////////////
         serial.write(requestData);
         if (serial.waitForBytesWritten(waitTimeout)) {
             //! [8] //! [10]

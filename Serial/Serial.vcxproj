@@ -229,6 +229,7 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="data_struct.h" />
     <ClInclude Include="GeneratedFiles\ui_serial.h" />
     <CustomBuild Include="masterthread.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
