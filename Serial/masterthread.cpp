@@ -1,4 +1,4 @@
-
+﻿
 #include "masterthread.h"
 #include "data_struct.h"
 #include <QtSerialPort/QSerialPort>
@@ -96,7 +96,7 @@ void MasterThread::run()
 		sData.Tail = 0xBB;
 
 		QByteArray requestData = QByteArray::fromRawData((char*)&sData, sData.PackageLength);
-		//ȥ��QByteArrayĩβ��β0x00;
+		//去除QByteArray末尾结尾0x00;
 		requestData.remove(sData.PackageLength-1, 1);
 		//////////////////////////////////////////////////////////////////////////////////
         serial.write(requestData);

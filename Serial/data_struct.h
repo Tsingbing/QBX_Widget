@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 
 #include <QWidget>
 #define PackageMaxLength 256
 #define PackageMinLength 7
 #define PackageHead 0xAA
 #define PackageTail 0xBB
-#define MyID 0x00      //×ÔÉíIDÎª0x01
+#define MyID 0x00      //è‡ªèº«IDä¸º0x01
 #define SLAVEID 0x01 
 #define SATCOMID 0x02
 #define SONARID 0x03
@@ -19,10 +19,10 @@ typedef struct
 	quint8 PID_Heading_ENorDIS; //keep heaning
 	quint8 PID_Deep_ENorDIS;    //keep pitch
 	quint8 PID_Roll_ENorDIS;    //keep Roll
-	short int  Speed;	   //ËÙ¶È0-100
-	short int  heading;    //·½Ïò-100 - 100
-	short int  pitch;	   //Éî¶È0 - 40
-	short int  roll;       //²àÇãÔË¶¯¿ØÖÆ Ä¬ÈÏ0¶È
+	short int  Speed;	   //é€Ÿåº¦0-100
+	short int  heading;    //æ–¹å‘-100 - 100
+	short int  pitch;	   //æ·±åº¦0 - 40
+	short int  roll;       //ä¾§å€¾è¿åŠ¨æ§åˆ¶ é»˜è®¤0åº¦
 }DATA_FREE_MOVE_TypeDef;
 DATA_FREE_MOVE_TypeDef sDataFreeMove;
 
