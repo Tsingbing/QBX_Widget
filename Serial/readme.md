@@ -21,8 +21,7 @@
 - MasterThread为串口线程。
   - 等待响应的时候，用线程，而不用sleep。  
 - qbx_serial为用户接口，UI界面调用。
-
-const DataPackage_TypeDef* pData = (DataPackage_TypeDef*)(s.data());
-DATA_FREE_MOVE_TypeDef DataFree;//
-memcpy(&DataFree, (char*)(pData)+5, sizeof(DATA_FREE_MOVE_TypeDef));
+#### bug
+- qb_02 结构体对齐导致数据不准。
+  - 添加 #pragma pack(4) ... pragma pack()
 

@@ -36,15 +36,18 @@ void Serial::showResponse(const QByteArray & s)
 	setControlsEnabled(true);
 	
 	//添加解析函数，将QByteArray反序列化。
-	const DataPackage_TypeDef* pData = (DataPackage_TypeDef*)(s.data());
-	Data_MOVE_TypeDef DataMove;//
-	memcpy(&DataMove, &(pData->Code), pData->PackageLength - 11);  //数字11 = 12 - 1字节对齐
-    //memcpy(&DataMove, (char*)(pData)+4, pData->PackageLength - 6);//截取字节段copy到结构体。
-
-	ui.trafficLabel->setText(tr("Traffic, transaction #%1:"
-		"\n\r-request: %2"
-		"\n\r-response: %3")
-		.arg(QString::number(DataMove.Yaw)).arg(ui.requestLineEdit->text()).arg(QString(s.data())));
+	//const DataPackage_TypeDef* pData = (DataPackage_TypeDef*)(s.data());
+	
+	//memcpy(&DataMove, &(pData->Code), sizeof(DataMove));  //数字11 = 12 - 1字节对齐
+    memcpy(&DataMove, s.data()+5, s[1] - 6);//截取字节段copy到结构体。
+	
+	ui.trafficLabel->setText(
+		tr(	" Speed       %1"
+		"\n\rDirection:  %2"
+		"\n\rlightpower: %3")
+		.arg(QString::number(DataMove.Speed))
+		.arg(QString::number(DataMove.Direction))
+		.arg(QString::number(DataMove.lightpower)));
 
 }
 

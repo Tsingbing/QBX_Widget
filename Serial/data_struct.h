@@ -1,5 +1,5 @@
 ﻿#pragma once
-
+//#pragma pack(1)
 #include <QWidget>
 #define PackageMaxLength 256
 #define PackageMinLength 7
@@ -27,16 +27,18 @@ typedef struct
 	int x, y;    //设备二维坐标 
 }Point2d_TypeDef;
 /*************************/
+#pragma pack(1)
 typedef struct
 {
-	quint8	Head;
-	quint8  PackageLength;//整包长 
-	quint8	SendID;
-	quint8	ReceivedID;
-	quint8	Cmd;
-	quint8	*Code;
-	quint8	Tail;
+	char	Head;
+	char  PackageLength;//整包长 
+	char	SendID;
+	char	ReceivedID;
+	char	Cmd;
+	char	*Code;
+	char	Tail;
 }DataPackage_TypeDef;
+#pragma pack()
 
 typedef enum
 {
@@ -50,6 +52,7 @@ typedef enum
 	CMD_DOWNLOADCONTROL//程序加载控制 
 }TrainCmd;
 
+#pragma pack(4)
 typedef struct
 { /******方向或角度控制左负右正*****/
 	char  Speed;	//正负100 //油门百分比 负数代表反向 
@@ -57,9 +60,9 @@ typedef struct
 	char  lightpower;//设备灯控 0-100 亮度 
 	char  Deepset;	//-100 ~ +100
 	char  Roll;    //定侧倾角  默认 0度 
-	char Yaw;     //定向  ENABLE:开始锁定	DISABLE 
+	char  Yaw;     //定向  ENABLE:开始锁定	DISABLE 
 }Data_MOVE_TypeDef;
-
+#pragma pack()
 
 typedef struct
 {

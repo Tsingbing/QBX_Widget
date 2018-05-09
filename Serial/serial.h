@@ -28,6 +28,7 @@ private:
 private:
 	int transactionCount;
 	MasterThread thread;
+	Data_MOVE_TypeDef DataMove;//
 };
 
 #endif // SERIAL_H
