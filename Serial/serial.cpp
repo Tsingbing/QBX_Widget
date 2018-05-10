@@ -39,7 +39,7 @@ void Serial::showResponse(const QByteArray & s)
 	//const DataPackage_TypeDef* pData = (DataPackage_TypeDef*)(s.data());
 	
 	//memcpy(&DataMove, &(pData->Code), sizeof(DataMove));  //数字11 = 12 - 1字节对齐
-	if (QString(s.toHex()).left(2)== "aa" &&QString(s.toHex()).right(2) == "bb")
+	if (QString(s.toHex()).left(2)== "aa" && QString(s.toHex()).right(2) == "bb")
 	{
 		memcpy(&DataMove, s.data()+5, s[1] - 6);//截取字节段copy到结构体。
 	
