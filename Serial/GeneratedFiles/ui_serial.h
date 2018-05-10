@@ -66,7 +66,7 @@ public:
         waitResponseSpinBox->setObjectName(QStringLiteral("waitResponseSpinBox"));
         waitResponseSpinBox->setGeometry(QRect(130, 110, 81, 22));
         waitResponseSpinBox->setMaximum(10000);
-        waitResponseSpinBox->setValue(10000);
+        waitResponseSpinBox->setValue(1000);
         serialPortComboBox = new QComboBox(centralWidget);
         serialPortComboBox->setObjectName(QStringLiteral("serialPortComboBox"));
         serialPortComboBox->setGeometry(QRect(130, 70, 81, 22));

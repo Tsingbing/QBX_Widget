@@ -24,7 +24,7 @@ MasterThread::~MasterThread()
 //! [0]
 
 //! [1] //! [2]
-void MasterThread::transaction(const QString &portName, int waitTimeout, const QString &request)
+void MasterThread::transaction(const QString &portName, int waitTimeout, const QByteArray &request)
 {
     //! [1]
     QMutexLocker locker(&mutex);
@@ -34,8 +34,8 @@ void MasterThread::transaction(const QString &portName, int waitTimeout, const Q
     //! [3]
     if (!isRunning())
         start();
-    //else
-        //cond.wakeOne();
+    else
+        cond.wakeOne();
 }
 //! [2] //! [3]
 
@@ -53,7 +53,7 @@ void MasterThread::run()
     }
 
     int currentWaitTimeout = waitTimeout;
-    QString currentRequest = request;
+    //QString currentRequest = request;
     mutex.unlock();
     //! [5] //! [6]
     QSerialPort serial;
@@ -72,41 +72,9 @@ void MasterThread::run()
         }
         //! [7] //! [8]
         // write request
-        //QByteArray requestData = currentRequest.toLocal8Bit();
+       // QByteArray requestData = currentRequest.toLocal8Bit();
 
-		////////////////////////////////////////////////////////////////////////////////
-
-		DataMove.Speed = 1;
-		DataMove.Direction = 2;
-		DataMove.lightpower = 3;
-		DataMove.Deepset = 4;
-		DataMove.Roll = 5;
-		DataMove.Yaw = 6;
-		QByteArray Code = QByteArray::fromRawData((char*)&DataMove, sizeof(DataMove));
-
-		//sData.Head = 0xAA;
-		//sData.PackageLength = sizeof(sData); //结构体字节补齐
-		////sData.PackageLength = sizeof(sData);
-		//sData.SendID = 0xFE;
-		//sData.ReceivedID = 0x01;
-		//sData.Cmd = 0x01;
-		////memcpy(&(sData.Code), &DataMove, sizeof(DataMove));
-		//sData.Code = 0;
-		//sData.Tail = 0xBB;
-
-		QByteArray requestData;
-		//requestData.resize(sizeof(sData));
-		requestData[0] = 0xAA;
-		requestData[1] = sizeof(DataMove) + 6;
-		requestData[2] = 0xFE;
-		requestData[3] = 0x01;
-		requestData[4] = 0x00;
-		requestData += Code;
-		requestData += 0xBB;
-		//requestData = QByteArray::fromRawData((char*)&sData, sizeof(sData));
-		//////////////////////////////////////////////////////////////////////////////////
-
-        serial.write(requestData);
+        serial.write(request);
         if (serial.waitForBytesWritten(waitTimeout)) {
             //! [8] //! [10]
             // read response
@@ -130,7 +98,7 @@ void MasterThread::run()
         }
         //! [9]  //! [13]
         mutex.lock();
-        //cond.wait(&mutex);
+        cond.wait(&mutex);
         if (currentPortName != portName) {
             currentPortName = portName;
             currentPortNameChanged = true;
@@ -138,7 +106,7 @@ void MasterThread::run()
             currentPortNameChanged = false;
         }
         currentWaitTimeout = waitTimeout;
-        currentRequest = request;
+        //currentRequest = request;
         mutex.unlock();
     }
     //! [13]

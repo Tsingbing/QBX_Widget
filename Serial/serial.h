@@ -24,10 +24,14 @@ private slots:
 
 private:
 	void setControlsEnabled(bool enable);
+	void setRequestData(TrainCmd cmd);
+	void getResponseData(const QByteArray & s);
 
 private:
 	int transactionCount;
+	QByteArray requestData;
 	MasterThread thread;
+
 	Data_MOVE_TypeDef DataMove;//
 };
 

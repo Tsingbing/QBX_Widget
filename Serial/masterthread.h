@@ -16,7 +16,7 @@ public:
     explicit MasterThread(QObject *parent = nullptr);
     ~MasterThread();
 
-    void transaction(const QString &portName, int waitTimeout, const QString &request);
+    void transaction(const QString &portName, int waitTimeout, const QByteArray &request);
     void run() Q_DECL_OVERRIDE;
 
 signals:
@@ -26,14 +26,11 @@ signals:
 
 private:
     QString portName;
-    QString request;
+	QByteArray request;
     int waitTimeout;
     QMutex mutex;
     QWaitCondition cond;
     bool quit;
-
-	Data_MOVE_TypeDef DataMove;
-	DataPackage_TypeDef sData;
 };
 //! [0]
 
