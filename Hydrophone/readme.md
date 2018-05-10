@@ -29,4 +29,10 @@
 >>    	long long	cnt;            //包长度 计数 
 >>    }Data_SOUNDAck_TypeDef;
 >>
->> ```
+
+- [通信机构图](https://github.com/qbingx/QBX_Widget/blob/2018.5.4/Serial/Resources/%E9%80%9A%E4%BF%A1%E6%9E%B6%E6%9E%84%E5%9B%BE.jpg)
+
+
+
+
+
