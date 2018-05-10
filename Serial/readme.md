@@ -26,6 +26,7 @@
 #### bug
 - qb_02 结构体对齐导致数据不准。
   - 添加 #pragma pack(4) ... pragma pack()
+- qb_03 读取QByteArray的char值 为0x00AA，无法做包头包尾判断。
 
 #### 主要代码
 ```

@@ -27,7 +27,7 @@ typedef struct
 	int x, y;    //设备二维坐标 
 }Point2d_TypeDef;
 /*************************/
-#pragma pack(1)
+//#pragma pack(4)
 typedef struct
 {
 	char	Head;
@@ -38,7 +38,7 @@ typedef struct
 	char	*Code;
 	char	Tail;
 }DataPackage_TypeDef;
-#pragma pack()
+//#pragma pack()
 
 typedef enum
 {
@@ -52,7 +52,7 @@ typedef enum
 	CMD_DOWNLOADCONTROL//程序加载控制 
 }TrainCmd;
 
-#pragma pack(4)
+//#pragma pack(4)
 typedef struct
 { /******方向或角度控制左负右正*****/
 	char  Speed;	//正负100 //油门百分比 负数代表反向 
@@ -62,7 +62,7 @@ typedef struct
 	char  Roll;    //定侧倾角  默认 0度 
 	char  Yaw;     //定向  ENABLE:开始锁定	DISABLE 
 }Data_MOVE_TypeDef;
-#pragma pack()
+//#pragma pack()
 
 typedef struct
 {

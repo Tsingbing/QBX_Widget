@@ -1,4 +1,4 @@
-#include "serial.h"
+ï»¿#include "serial.h"
 #include <QtSerialPort/QSerialPortInfo>
 
 Serial::Serial(QWidget *parent)
@@ -35,19 +35,24 @@ void Serial::showResponse(const QByteArray & s)
 {
 	setControlsEnabled(true);
 	
-	//Ìí¼Ó½âÎöº¯Êý£¬½«QByteArray·´ÐòÁÐ»¯¡£
+	//æ·»åŠ è§£æžå‡½æ•°ï¼Œå°†QByteArrayååºåˆ—åŒ–ã€‚
 	//const DataPackage_TypeDef* pData = (DataPackage_TypeDef*)(s.data());
 	
-	//memcpy(&DataMove, &(pData->Code), sizeof(DataMove));  //Êý×Ö11 = 12 - 1×Ö½Ú¶ÔÆë
-    memcpy(&DataMove, s.data()+5, s[1] - 6);//½ØÈ¡×Ö½Ú¶Îcopyµ½½á¹¹Ìå¡£
+	//memcpy(&DataMove, &(pData->Code), sizeof(DataMove));  //æ•°å­—11 = 12 - 1å­—èŠ‚å¯¹é½
+	if (QString(s.toHex()).left(2)== "aa" &&QString(s.toHex()).right(2) == "bb")
+	{
+		memcpy(&DataMove, s.data()+5, s[1] - 6);//æˆªå–å­—èŠ‚æ®µcopyåˆ°ç»“æž„ä½“ã€‚
 	
-	ui.trafficLabel->setText(
-		tr(	" Speed       %1"
-		"\n\rDirection:  %2"
-		"\n\rlightpower: %3")
-		.arg(QString::number(DataMove.Speed))
-		.arg(QString::number(DataMove.Direction))
-		.arg(QString::number(DataMove.lightpower)));
+		ui.showDate->setText(s.toHex(':'));
+		ui.trafficLabel->setText(
+				tr(	" Speed       %1"
+				"\n\rDirection:  %2"
+				"\n\rlightpower: %3")
+				.arg(QString::number(DataMove.Speed))
+				.arg(QString::number(DataMove.Direction))
+				.arg(QString::number(DataMove.lightpower)));
+	}
+	
 }
 
 void Serial::processError(const QString & s)

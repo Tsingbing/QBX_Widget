@@ -50,7 +50,7 @@ public:
     {
         if (SerialClass->objectName().isEmpty())
             SerialClass->setObjectName(QStringLiteral("SerialClass"));
-        SerialClass->resize(800, 400);
+        SerialClass->resize(800, 618);
         centralWidget = new QWidget(SerialClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         runButton = new QPushButton(centralWidget);
@@ -84,7 +84,7 @@ public:
         statusLabel->setGeometry(QRect(40, 310, 381, 16));
         showDate = new QTextEdit(centralWidget);
         showDate->setObjectName(QStringLiteral("showDate"));
-        showDate->setGeometry(QRect(570, 30, 131, 271));
+        showDate->setGeometry(QRect(40, 340, 711, 171));
         SerialClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(SerialClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
