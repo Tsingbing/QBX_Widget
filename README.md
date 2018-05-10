@@ -18,10 +18,12 @@
 |MUI         | 姿态仪，倾斜角\俯仰角
 |Voyage      | 航程总路程
 |Serial      | 串口通信
+|TCP         | 网络通信
 |Power       | 电量显示
 |OSG3D       | 3D仿真姿态显示
 |Map         | 地图
 |Plugin      | 插件系统
+|Hydrophone  | 水听器频谱图
 |Welcome     | 启动界面
 |Algorithms  | 算法集
 
