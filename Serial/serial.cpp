@@ -48,7 +48,6 @@ void Serial::showResponse(const QByteArray & s)
 		.arg(QString::number(DataMove.Speed))
 		.arg(QString::number(DataMove.Direction))
 		.arg(QString::number(DataMove.lightpower)));
-
 }
 
 void Serial::processError(const QString & s)
@@ -63,7 +62,6 @@ void Serial::processTimeout(const QString & s)
 	setControlsEnabled(true);
 	ui.statusLabel->setText(tr("Status: Running, %1.").arg(s));
 	ui.trafficLabel->setText(tr("No traffic."));
-
 }
 
 void Serial::setControlsEnabled(bool enable)

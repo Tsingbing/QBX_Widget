@@ -3,18 +3,20 @@
 #### 需求
 * 协议的自定义，帧的格式。
 * 显示返回状态信息。
+* [QT串口接收十六进制数据在文本框中显示](https://blog.csdn.net/wingWC/article/details/72842504)
 #### 设计
 * 使用线程来编写
 * 参考Qt示例
 * [序列化和反序列化](https://blog.csdn.net/yj540993866/article/details/48367139)
 * [QByteArray](http://doc.qt.io/qt-5.9/qbytearray.html)::fromHex("000c0dfffe")
 * QByteArray::fromRawData((char*)&sData, sData.PackageLength)
+* [互斥量、条件变量与pthread_cond_wait()函数的使用](https://www.cnblogs.com/cyyljw/p/7015774.html)
 #### 建立接口
 * 发送消息
 * 接收消息
 * 处理消息 
 
-#### 附件协
+#### 附件协议
 * shark协议表.xlsx
 
 #### 文件说明
@@ -24,8 +26,6 @@
 #### bug
 - qb_02 结构体对齐导致数据不准。
   - 添加 #pragma pack(4) ... pragma pack()
-
-
 
 #### 主要代码
 ```

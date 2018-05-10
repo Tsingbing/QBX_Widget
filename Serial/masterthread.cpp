@@ -34,8 +34,8 @@ void MasterThread::transaction(const QString &portName, int waitTimeout, const Q
     //! [3]
     if (!isRunning())
         start();
-    else
-        cond.wakeOne();
+    //else
+        //cond.wakeOne();
 }
 //! [2] //! [3]
 
@@ -130,7 +130,7 @@ void MasterThread::run()
         }
         //! [9]  //! [13]
         mutex.lock();
-        cond.wait(&mutex);
+        //cond.wait(&mutex);
         if (currentPortName != portName) {
             currentPortName = portName;
             currentPortNameChanged = true;

@@ -57,7 +57,7 @@ typedef struct
 { /******方向或角度控制左负右正*****/
 	char  Speed;	//正负100 //油门百分比 负数代表反向 
 	char  Direction;//正负100 //油门 
-	int   lightpower;//设备灯控 0-100 亮度 
+	char   lightpower;//设备灯控 0-100 亮度 
 	char  Deepset;	//-100 ~ +100
 	char  Roll;    //定侧倾角  默认 0度 
 	char  Yaw;     //定向  ENABLE:开始锁定	DISABLE 
