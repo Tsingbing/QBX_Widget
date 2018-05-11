@@ -83,20 +83,11 @@ void Serial::setRequestData(TrainCmd cmd)
 {
 	QByteArray Code;  //
 	requestData.clear();
-	/*requestData[0] = 0xAA;
-	DataMove.Speed = 1;
-	DataMove.Direction = 2;
-	DataMove.lightpower = 3;
-	DataMove.Deepset = 4;
-	DataMove.Roll = 5;
-	DataMove.Yaw = 6;
-	Code = QByteArray::fromRawData((char*)&DataMove, sizeof(DataMove));
-	requestData[1] = sizeof(DataMove) + 6;*/
-
-	//也是无法进入CMD_MOVE
+	requestData[0] = 0xAA;
+	
 	switch (cmd)
 	{
-		CMD_MOVE: //0
+		case CMD_MOVE: //0
 			DataMove.Speed = 1;
 			DataMove.Direction = 2;
 			DataMove.lightpower = 3;
@@ -106,25 +97,25 @@ void Serial::setRequestData(TrainCmd cmd)
 			Code = QByteArray::fromRawData((char*)&DataMove, sizeof(DataMove));
 			requestData[1] = sizeof(DataMove) + 6;
 			break;
-		CMD_STATE:
+		case CMD_STATE:
 
 			break;
-		CMD_FORMATE:
+		case CMD_FORMATE:
 
 			break;
-		CMD_LASERCONTROL:
+		case CMD_LASERCONTROL:
 
 			break;
-		CMD_PICTUREINF:
+		case CMD_PICTUREINF:
 
 			break;
-		CMD_GPSCOORD:
+		case CMD_GPSCOORD:
 
 			break;
-		CMD_SOUNDCONTROL:
+		case CMD_SOUNDCONTROL:
 
 			break;
-		CMD_DOWNLOADCONTROL:
+		case CMD_DOWNLOADCONTROL:
 
 			break;
 		default:
@@ -139,33 +130,33 @@ void Serial::setRequestData(TrainCmd cmd)
 
 void Serial::getResponseData(const QByteArray & s)
 {
-	if (QString(s.toHex()).left(2) == "aa" && QString(s.toHex()).right(2) == "bb")
+	//if (QString(s.toHex()).left(2) == "aa" && QString(s.toHex()).right(2) == "bb")
+	if (s[0] == (char)0xaa && s[s.size() - 1] == (char)0xbb)
 	{
-		//无法进入cmd
-		switch (int(s[4]))
+		switch (s[4])
 		{
-		CMD_MOVE: //0
+		case CMD_MOVE: //0
 			memcpy(&DataMove, s.data() + 5, s[1] - 6);//截取字节段copy到结构体。
 			break;
-		CMD_STATE:
+		case CMD_STATE:
 
 			break;
-		CMD_FORMATE:
+		case CMD_FORMATE:
 
 			break;
-		CMD_LASERCONTROL:
+		case CMD_LASERCONTROL:
 
 			break;
-		CMD_PICTUREINF:
+		case CMD_PICTUREINF:
 
 			break;
-		CMD_GPSCOORD:
+		case CMD_GPSCOORD:
 
 			break;
-		CMD_SOUNDCONTROL:
+		case CMD_SOUNDCONTROL:
 
 			break;
-		CMD_DOWNLOADCONTROL:
+		case CMD_DOWNLOADCONTROL:
 
 			break;
 		default:
