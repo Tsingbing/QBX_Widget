@@ -48,6 +48,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TCP", "TCP\TCP.vcxproj", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hydrophone", "Hydrophone\Hydrophone.vcxproj", "{91D5D57C-DE8C-4204-A536-EA2E3BD17910}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Joysticks", "Joysticks\Joysticks.vcxproj", "{02A690B6-2C5B-4046-986D-80394E46A717}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -216,6 +218,14 @@ Global
 		{91D5D57C-DE8C-4204-A536-EA2E3BD17910}.Release|x64.Build.0 = Release|x64
 		{91D5D57C-DE8C-4204-A536-EA2E3BD17910}.Release|x86.ActiveCfg = Release|Win32
 		{91D5D57C-DE8C-4204-A536-EA2E3BD17910}.Release|x86.Build.0 = Release|Win32
+		{02A690B6-2C5B-4046-986D-80394E46A717}.Debug|x64.ActiveCfg = Debug|x64
+		{02A690B6-2C5B-4046-986D-80394E46A717}.Debug|x64.Build.0 = Debug|x64
+		{02A690B6-2C5B-4046-986D-80394E46A717}.Debug|x86.ActiveCfg = Debug|Win32
+		{02A690B6-2C5B-4046-986D-80394E46A717}.Debug|x86.Build.0 = Debug|Win32
+		{02A690B6-2C5B-4046-986D-80394E46A717}.Release|x64.ActiveCfg = Release|x64
+		{02A690B6-2C5B-4046-986D-80394E46A717}.Release|x64.Build.0 = Release|x64
+		{02A690B6-2C5B-4046-986D-80394E46A717}.Release|x86.ActiveCfg = Release|Win32
+		{02A690B6-2C5B-4046-986D-80394E46A717}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,7 +31,7 @@ private:
 	int transactionCount;
 	QByteArray requestData;
 	MasterThread thread;
-
+	Data_STATEACK_TypeDef DataStateAck;
 	Data_MOVE_TypeDef DataMove;//
 };
 
