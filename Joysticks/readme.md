@@ -7,3 +7,4 @@
 [开源代码地址](https://github.com/qbingx/JoyTest)
 #### 测试
 #### bug
+- 只能在release下运行，因为SDL.dll只有release版的，并没有debug版的。可以自己根据源代码生成。
