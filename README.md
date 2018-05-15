@@ -24,6 +24,7 @@
 |Map         | 地图              |   *    |       |      |      |      |
 |Plugin      | 插件系统          |   *    |       |      |      |      |
 |Hydrophone  | 水听器频谱图      |   *    |       |      |      |      |
+|LaserScanning|激光3D图          |        |   *   |      |      |      |
 |Welcome     | 启动界面          |   *    |       |      |      |      |
 |Algorithms  | 算法集            |   *    |       |      |      |      |
 
