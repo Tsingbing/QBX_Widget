@@ -4,6 +4,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_serial.h"
 #include "masterthread.h"
+#include <QTime>
 
 class Serial : public QMainWindow
 {
@@ -33,6 +34,15 @@ private:
 	MasterThread thread;
 	Data_STATEACK_TypeDef DataStateAck;
 	Data_MOVE_TypeDef DataMove;//
+
+protected:
+	void timerEvent(QTimerEvent *event);
+
+private:
+	int m_timerId;
+
+	float m_realTime;
+	QTime m_time;
 };
 
 #endif // SERIAL_H

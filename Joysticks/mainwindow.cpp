@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent) :
     {
         Q_ASSERT(joystick->deadzone(i, (i != 2 && i != 5 ? 16000 : 0)));
     }
+
     joystick->bilinearEnable(true);
     joystick->bilinearConstant(1.25);
 

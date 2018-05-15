@@ -1,9 +1,13 @@
 ﻿#include "serial.h"
+#include <math.h>
 #include <QtSerialPort/QSerialPortInfo>
+
 
 Serial::Serial(QWidget *parent)
 	: QMainWindow(parent)
 	, transactionCount(0)
+	, m_timerId(0)
+	, m_realTime(0.0)
 {
 	ui.setupUi(this);
 	const auto infos = QSerialPortInfo::availablePorts();
@@ -14,11 +18,15 @@ Serial::Serial(QWidget *parent)
 	connect(&thread, &MasterThread::response, this, &Serial::showResponse);
 	connect(&thread, &MasterThread::error, this, &Serial::processError);
 	connect(&thread, &MasterThread::timeout, this, &Serial::processTimeout);
+	m_timerId = startTimer(0);
+	m_time.start();
 }
 
 Serial::~Serial()
 {
 
+
+	if (m_timerId) killTimer(m_timerId);
 }
 
 void Serial::transaction()
@@ -148,12 +156,6 @@ void Serial::setRequestData(TrainCmd cmd)
 	switch (cmd)
 	{
 		case CMD_MOVE: //0
-			DataMove.Speed = 1;
-			DataMove.Direction = 2;
-			DataMove.lightpower = 5;
-			DataMove.Deepset = 4;
-			DataMove.Roll = 5;
-			DataMove.Yaw = 6;
 			Code = QByteArray::fromRawData((char*)&DataMove, sizeof(DataMove));
 			requestData[1] = sizeof(DataMove) + 6;
 			requestData[4] = 0x00;
@@ -237,5 +239,23 @@ void Serial::getResponseData(const QByteArray & s)
 			break;
 		}
 	}
+}
+
+void Serial::timerEvent(QTimerEvent * event)
+{
+	/////////////////////////////////
+	QObject::timerEvent(event);
+	/////////////////////////////////
+
+	float timeStep = m_time.restart();
+
+	m_realTime = m_realTime + timeStep / 1000.0f;
+
+	DataMove.Speed = 50.0f * sin(m_realTime / 10.0f) + 50.0f; //速度
+	DataMove.Direction = 100.0f * sin(m_realTime / 10.0f);     // 方向
+	DataMove.lightpower = 5.0f * sin(m_realTime / 10.0f) + 5.0f;     //电量，0-5 
+	DataMove.Deepset = 128.0f * sin(m_realTime / 20.0f);      //温度 +-128 
+	DataMove.Roll = 180.0f * sin(m_realTime / 10.0f);    	 //侧倾角
+	DataMove.Yaw = 50.0f  * sin(m_realTime / 20.0f) + 50.0f;		 //湿度 百分之 0-100 
 }
 

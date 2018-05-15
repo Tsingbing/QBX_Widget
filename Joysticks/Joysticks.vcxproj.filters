@@ -59,14 +59,14 @@
     <ClCompile Include="GeneratedFiles\Release\moc_qjoystickinterface.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="mainwindow.cpp">
-      <Filter>Form Files</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_mainwindow.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_mainwindow.cpp">
       <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Form Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -79,10 +79,10 @@
     <CustomBuild Include="qjoystickinterface.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="mainwindow.h">
+    <CustomBuild Include="mainwindow.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="mainwindow.ui">
+    <CustomBuild Include="mainwindow.h">
       <Filter>Form Files</Filter>
     </CustomBuild>
   </ItemGroup>
