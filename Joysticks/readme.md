@@ -9,5 +9,6 @@
 - DirectInput和其他DirectX组成部分一样，是通过硬件抽象层（HAL）和硬件仿真层（HEL）来实现。
 #### 测试
 #### bug
-- 只能在release下运行，因为SDL.dll只有release版的，并没有debug版的。可以自己根据源代码生成。
-- qt调用Dxinput相关库失败，查询很久，不知原因，可建立Qt调用DX库的项目工程。
+- 只能在release下运行，因为SDL.dll只有release版的，并没有debug版的(无法调试)。可以自己根据源代码生成。
+    - 更换SDL2（debug下），出现SDL1和SDL2的兼容性问题（时间紧迫，待解决）。
+- qt调用Dxinput相关库失败，查询很久，不知原因，可建立Qt调用DX库的项目工程（时间紧迫，待解决）。

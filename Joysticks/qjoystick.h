@@ -12,6 +12,7 @@
 #ifdef Q_OS_LINUX
 #include <SDL/SDL.h>
 #else
+//#include "SDL.h"
 #include "depends/windows/SDL/SDL.h"
 #endif
 
