@@ -2,6 +2,8 @@
 * Qt5.9.1 + msvc2015 + 64bit
 * opencv3.2 + msvc2015 + 64bit
 * 编译器 msvc2015 + 64bits
+* SDL1.2
+* DirectInput
 
 #### 文件说明
 			 
