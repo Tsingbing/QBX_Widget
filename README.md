@@ -24,9 +24,9 @@
 |Map         | 地图              |   *    |       |      |      |      |
 |Plugin      | 插件系统          |   *    |       |      |      |      |
 |Hydrophone  | 频谱图      |   *    |       |      |      |      |
-|LaserScanning|激光3D图          |        |   *   |      |      |      |
+|LaserScanning|3D图          |        |   *   |      |      |      |
 |Welcome     | 启动界面          |   *    |       |      |      |      |
-|Algorithms  | 算法集            |   *    |       |      |      |      |
+|Algorithms  | 算法集           |   *    |       |      |      |      |
 
 * 每个文件夹内都readme.md,记录代码更新状态、版本信息和bug信息。
 * 每个文件夹都是可执行的项目，都有测试代码。
