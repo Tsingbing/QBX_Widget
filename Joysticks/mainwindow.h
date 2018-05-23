@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "data_struct.h"
 
 namespace Ui {
 class MainWindow;
@@ -62,6 +63,8 @@ private:
 
 	QList<QProgressBar*> axesValues2;
 	//////////////////////////////////
+
+	Data_MOVE_TypeDef DataMove;//
 };
 
 #endif // MAINWINDOW_H

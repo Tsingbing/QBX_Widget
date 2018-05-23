@@ -71,6 +71,19 @@
      <layout class="QVBoxLayout" name="verticalLayout"/>
     </widget>
    </widget>
+   <widget class="QLabel" name="showDataLabel">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>70</y>
+      <width>611</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

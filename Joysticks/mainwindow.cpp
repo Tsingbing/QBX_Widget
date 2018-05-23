@@ -258,7 +258,11 @@ void MainWindow::onAxesUpdated(QList<int> values)
     for(int i=0; i<axesValues.count(); i++)
     {
 		axesValues[i]->setValue(values[i]);
+		//qDebug() << values[i]/ 32767.0f * 100 << endl;
     }
+	DataMove.Roll = values[0]/ 32767.0f * 100;
+	DataMove.Yaw = values[1]/ 32767.0f * 100;
+	qDebug() << (int)DataMove.Yaw << (int)DataMove.Roll << endl;
 }
 
 //////////////////////////////////////////////////////////////////////////

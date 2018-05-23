@@ -163,7 +163,7 @@ void qbx_MUI::updateView()
 	m_scaleX = (float)width() / (float)m_originalWidth;
 	m_scaleY = (float)height() / (float)m_originalHeight;
 
-	m_itemLabel0->setPlainText(QString("%1").arg(m_pitch - 90, 5, 'f', 0, QChar(' ')));
+	m_itemLabel0->setPlainText(QString("%1").arg(m_pitch , 5, 'f', 0, QChar(' ')));
 
 	m_itemHand->setRotation(m_roll);
 	m_itemRing->setRotation(m_roll);

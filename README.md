@@ -2,8 +2,6 @@
 * Qt5.9.1 + msvc2015 + 64bit
 * opencv3.2 + msvc2015 + 64bit
 * 编译器 msvc2015 + 64bits
-* SDL1.2
-* DirectInput
 
 #### 文件说明
 			 
@@ -25,7 +23,7 @@
 |OSG3D       | 3D仿真姿态显示    |   *    |       |      |      |      |
 |Map         | 地图              |   *    |       |      |      |      |
 |Plugin      | 插件系统          |   *    |       |      |      |      |
-|Hydrophone  | 水听器频谱图      |   *    |       |      |      |      |
+|Hydrophone  | 频谱图      |   *    |       |      |      |      |
 |LaserScanning|激光3D图          |        |   *   |      |      |      |
 |Welcome     | 启动界面          |   *    |       |      |      |      |
 |Algorithms  | 算法集            |   *    |       |      |      |      |

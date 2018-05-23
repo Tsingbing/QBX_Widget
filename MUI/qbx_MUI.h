@@ -26,13 +26,13 @@ public:
 	void reinit();
 
 	/** @param roll angle [deg] */
-	inline void setRoll(float roll)
+	inline void setRoll(int roll)
 	{
 		m_roll = roll;
 	}
 
 	/** @param pitch angle [deg] */
-	inline void setPitch(float pitch)
+	inline void setPitch(int pitch)
 	{
 		m_pitch = pitch;
 	}

@@ -1,6 +1,6 @@
 ﻿#include "serial.h"
 #include <math.h>
-#include <QtSerialPort/QSerialPortInfo>
+
 
 
 Serial::Serial(QWidget *parent)
@@ -24,8 +24,6 @@ Serial::Serial(QWidget *parent)
 
 Serial::~Serial()
 {
-
-
 	if (m_timerId) killTimer(m_timerId);
 }
 

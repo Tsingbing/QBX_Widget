@@ -76,7 +76,7 @@ void Widget::handleQJoystickButtonEvent(QJoystickButtonEvent* event)
     Q_ASSERT(button < buttonLabels.count());
     QLabel *label = buttonLabels.at(button);
     if (event->pressed())
-        label->setText(QString ("%1: <b><font color=green>D</font></b>").arg(button));
+        label->setText(QString ("%1: <b><font color=red>D</font></b>").arg(button));
     else
         label->setText(QString ("%1: <b><font color=grey>U</font></b>").arg(button));
 }

@@ -5,6 +5,7 @@
 #include "ui_serial.h"
 #include "masterthread.h"
 #include <QTime>
+#include <QtSerialPort/QSerialPortInfo>
 
 class Serial : public QMainWindow
 {
